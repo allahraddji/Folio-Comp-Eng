@@ -1,5 +1,5 @@
 window.SITE = {
-name: "Allahra Dionadji",
+name: "[Allahra Dionadji]",
 role: "Control & Intelligent Systems Engineer",
 location: "Ndjamena, Chad",
 email: "allahradionadji@gmail.com \n School: adgilchrist",
@@ -27,3 +27,4 @@ experience: [
 { role: "Research Intern", org: "Autonomy Research Center", period: "2022 – 2023", bullets: ["Implemented EKF sensor fusion; reduced drift by 30%.", "Co-authored safe RL for control paper."] }
 ]
 };
+
