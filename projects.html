@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Projects – [Your Name]</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="font-[Inter] bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+<header id="siteHeader"></header>
+<main class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
+<h1 class="text-4xl font-extrabold">Projects</h1>
+<p class="mt-2 text-slate-600 dark:text-slate-300">Model predictive control, estimation, robotics, and embedded deployment.</p>
+<div class="mt-8 flex gap-3 text-sm">
+<button data-filter="all" class="filter-btn px-3 py-1.5 rounded-xl border">All</button>
+<button data-filter="control" class="filter-btn px-3 py-1.5 rounded-xl border">Control</button>
+<button data-filter="estimation" class="filter-btn px-3 py-1.5 rounded-xl border">Estimation</button>
+<button data-filter="robotics" class="filter-btn px-3 py-1.5 rounded-xl border">Robotics</button>
+<button data-filter="rl" class="filter-btn px-3 py-1.5 rounded-xl border">Learning</button>
+</div>
+<div id="projectsGridAll" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+</main>
+<footer id="siteFooter" class="py-8 text-center text-sm text-slate-500"></footer>
+<script src="data.js"></script>
+<script src="app.js" defer></script>
+</body>
+</html>
