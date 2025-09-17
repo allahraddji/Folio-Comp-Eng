@@ -1,6 +1,3 @@
-// ===== Theme boot =====
-}
-
 
 function renderProjectsPage(){
 const grid = document.getElementById('projectsGridAll'); if (!grid) return;
@@ -94,4 +91,5 @@ renderProjectsPage();
 renderPublicationsPage();
 renderExperiencePage();
 wireContactForm();
+
 });
