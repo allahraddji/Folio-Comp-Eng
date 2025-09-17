@@ -1,9 +1,9 @@
 window.SITE = {
-name: "[Your Name]",
+name: "Allahra Dionadji",
 role: "Control & Intelligent Systems Engineer",
-location: "[City, Country]",
-email: "you@example.com",
-github: "https://github.com/yourhandle",
+location: "Ndjamena, Chad",
+email: "allahradionadji@gmail.com \n School: adgilchrist",
+github: "https://github.com/allahraddji",
 linkedin: "https://www.linkedin.com/in/yourhandle/",
 scholar: "https://scholar.google.com/citations?user=XXXX",
 metrics: { years: "3", robots: "5", pubs: "4", stars: "120" },
@@ -14,7 +14,7 @@ ai: ["RL (DQN/PPO)", "Imitation Learning", "Policy Gradients", "Model‑based RL
 tooling: ["Git/GitHub", "Docker", "CI/CD", "SITL/HIL", "AWS/GCP"]
 },
 projects: [
-{ title: "Nonlinear MPC for Quadrotor Tracking", summary: "NMPC with constraints; Python+CasADi sim; C++ ROS2 onboard.", tags: ["control","robotics","NMPC","ROS2"], link: "#", image: "https://placehold.co/600x400?text=NMPC+Quadrotor" },
+{ title: "Self-Driving Wheelchair", summary: "NMPC with constraints; Python+CasADi sim; C++ ROS2 onboard.", tags: ["control","robotics","Matlab","ROS2","CoppeliaSim"], link: "#", image: "https://placehold.co/600x400?text=NMPC+Quadrotor" },
 { title: "Visual-Inertial State Estimation", summary: "EKF/UKF fusion; real-time VIO with loop closure.", tags: ["estimation","robotics","EKF","VIO"], link: "#", image: "https://placehold.co/600x400?text=VIO+Estimation" },
 { title: "Learning-Based Control for Inverted Pendulum", summary: "PPO controller + CBF safety filter.", tags: ["rl","control","CBF"], link: "#", image: "https://placehold.co/600x400?text=RL+Control" }
 ],
