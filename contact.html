@@ -1,58 +1,59 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Contact Allahra Dionadji</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Alexander Aronowitz</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="font-[Inter] bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-<header id="siteHeader"></header>
-<main class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
-<h1 class="text-4xl font-extrabold">Get in touch</h1>
-<p class="mt-2 text-slate-600 dark:text-slate-300">Fastest way to reach me is email. I’m open to roles in robotics, autonomy, industrial control, and research collaborations.</p>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><span class="brand-tag">ALEXANDER ARONOWITZ</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span class="sr-only">Toggle menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="experience.html">EXPERIENCE</a></li>
+          <li><a href="projects.html">PROJECT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-meter"><span></span></div>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main">
+    <section class="contact section">
+      <div class="container">
+        <h2 class="section-title">GET IN TOUCH</h2>
+        <p class="subtitle">Let’s Work Together</p>
 
-<div class="grid md:grid-cols-2 gap-10 items-start mt-8">
-<div class="space-y-2 text-sm">
-<p>Email: <a class="text-sky-600" id="emailLink" href="mailto:allahradionadji@gmail.com">allahradionadji@gmail.com</a><br><a class="text-sky-600" id="emailLink" href="mailto:adgilchrist@engineering.abu.edu.ng">adgilchrist@engineering.abu.edu.ng</a></p>
-<p>Location: <span id="locationText">Ndjamena, Chad</span></p>
-<p>
-<a class="text-sky-600" id="https://github.com/allahraddji" target="_blank" href="#">GitHub</a> ·
-<a class="text-sky-600" id="linkedinLink" target="_blank" href="#">LinkedIn</a> ·
-<a class="text-sky-600" id="scholarLink" target="_blank" href="#">Scholar</a>
-</p>
-</div>
-<form id="contactForm" class="bg-white dark:bg-slate-900/60 backdrop-blur rounded-2xl p-6 border border-slate-200 dark:border-slate-800">
-<div class="grid gap-4">
-<div>
-<label class="text-sm" for="name">Name</label>
-<input class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent" id="name" name="name" type="text" required />
-</div>
-<div>
-<label class="text-sm" for="email">Email</label>
-<input class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent" id="email" name="email" type="email" required />
-</div>
-<div>
-<label class="text-sm" for="message">Message</label>
-<textarea class="mt-1 w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-transparent" id="message" name="message" rows="4" required></textarea>
-</div>
-<div class="flex items-center justify-between">
-<p class="text-xs text-slate-500">This form uses mailto: by default. Replace with Formspree or your backend.</p>
-<button type="submit" class="px-4 py-2 rounded-xl bg-sky-500 text-white font-semibold">Send</button>
-</div>
-</div>
-</form>
-</div>
-</main>
-<footer id="siteFooter" class="py-8 text-center text-sm text-slate-500"></footer>
-<script src="data.js"></script>
-<script src="app.js" defer></script>
+        <div class="contact-grid">
+          <div class="contact-card"><div class="icon">📞</div><h3>Phone & Mobile</h3><p>+123-456-7890</p></div>
+          <div class="contact-card"><div class="icon">✉️</div><h3>Email & Website</h3><p>hello@reallygreatsite.com<br>reallygreatsite.com</p></div>
+          <div class="contact-card"><div class="icon">📍</div><h3>Address</h3><p>123 Anywhere St, Any City</p></div>
+          <div class="contact-card"><div class="icon">💙</div><h3>Social Media</h3><p>@reallygreatsite</p></div>
+        </div>
+
+        <form id="contactForm" class="contact-form" method="POST" action="/api/contact" novalidate>
+          <div class="grid">
+            <label><span>Name</span><input name="name" type="text" required minlength="2" /></label>
+            <label><span>Email</span><input name="email" type="email" required /></label>
+          </div>
+          <label><span>Message</span><textarea name="message" rows="5" required minlength="10"></textarea></label>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="baseline"><div class="line"></div><div class="stamp">PORTOFOLIO 2023</div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Alexander Aronowitz.</p></div></footer>
+  <script src="script.js" defer></script>
 </body>
-
 </html>
-
