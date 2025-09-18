@@ -1,88 +1,50 @@
-<!doctype html>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="styles.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education — Alexander Aronowitz</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="font-[Inter] bg-black text-slate-100">
-<!-- If your shared NAV (app.js) doesn't have Education, it'll still render header; you can add Education to NAV later. -->
-<header id="siteHeader"></header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><span class="brand-tag">ALEXANDER ARONOWITZ</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span class="sr-only">Toggle menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="experience.html">EXPERIENCE</a></li>
+          <li><a href="projects.html">PROJECT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-meter"><span></span></div>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main">
+    <section class="education section">
+      <div class="container edu-grid">
+        <div class="edu-left">
+          <h2 class="section-title">EDUCATION</h2>
+          <div class="section-underline"></div>
+          <p>Replace this with your education intro.</p>
+        </div>
+        <div class="edu-right">
+          <article class="edu-item"><h3>Senior Vocational High School</h3><p class="meta">School of Art | 2012</p></article>
+          <article class="edu-item"><h3>Bachelor Degree</h3><p class="meta">Borcelle Art University | Graphic Design | 2017</p></article>
+          <article class="edu-item"><h3>Master Degree</h3><p class="meta">Borcelle Art University | Master of Communication | 2019</p></article>
+        </div>
+      </div>
+      <div class="year-watermark">2012 – 2019</div>
+      <div class="baseline"><div class="line"></div><div class="stamp">PORTOFOLIO 2023</div></div>
+    </section>
+  </main>
 
-<main class="edu-wrap relative overflow-hidden">
-<section class="max-w-6xl mx-auto px-4 pt-12 pb-20 relative z-10">
-<div class="grid lg:grid-cols-12 gap-10">
-<!-- Left column: title + copy -->
-<div class="lg:col-span-5">
-<h1 class="edu-title">EDUCATION</h1>
-<div class="edu-underline"></div>
-<p class="mt-6 text-slate-200/95 leading-7 text-[15px] max-w-prose">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi. Suspendisse
-mollis nisl ac aliquet pretium. Suspendisse dignissim, odio non hendrerit suscipit, lorem ipsum tempus tortor, suscipit
-vestibulum velit quam nec nibh.
-</p>
-</div>
-
-
-<!-- Right column: dates + list -->
-<div class="lg:col-span-7 relative">
-<div class="edu-years" aria-hidden="true">
-<span class="edu-year-left">2012</span>
-<span class="edu-dash">—</span>
-<span class="edu-year-right">2019</span>
-</div>
-
-
-<div id="eduList" class="mt-16 space-y-8">
-<!-- JS will render from SITE.education if provided; else these samples remain. -->
-<article class="edu-item">
-<h3>Senior Vocational High School</h3>
-<p class="edu-meta">School of Art | 2012</p>
-</article>
-<article class="edu-item">
-<h3>Bachelor Degree</h3>
-<p class="edu-meta">Borcelle Art University | Graphic Design Bachelor | 2017</p>
-</article>
-<article class="edu-item">
-<h3>Master Degree</h3>
-<p class="edu-meta">Borcelle Art University | Master of Communication | 2019</p>
-</article>
-</div>
-</div>
-</div>
-</section>
-
-
-<!-- Bottom timeline across the page -->
-<div class="edu-timeline">
-<div class="edu-timeline-line"></div>
-<div class="edu-timeline-right-cap"></div>
-<div class="edu-timeline-left-cap"></div>
-<div class="edu-timeline-label">PORTFOLIO <span id="eduYear"></span></div>
-</div>
-</main>
-
-
-<footer id="siteFooter" class="py-8 text-center text-sm text-slate-500"></footer>
-
-
-<script src="data.js"></script>
-<script src="app.js" defer></script>
-<script>
-// Optional: Populate from SITE.education if you add it to data.js
-// Example shape: SITE.education = [{title:'B.Sc. Control Engineering', org:'XYZ University', meta:'2019 – 2023'}, ...]
-document.addEventListener('DOMContentLoaded', () => {
-const target = document.getElementById('eduList');
-if (window.SITE && Array.isArray(SITE.education) && SITE.education.length && target) {
-target.innerHTML = SITE.education.map(e => `
-<article class="edu-item">
-<h3>${e.title}</h3>
-<p class="edu-meta">${e.org}${e.meta ? ' | ' + e.meta : ''}</p>
-</article>`).join('');
-}
-document.getElementById('eduYear').textContent = new Date().getFullYear();
-});
-</script>
+  <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Alexander Aronowitz.</p></div></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
