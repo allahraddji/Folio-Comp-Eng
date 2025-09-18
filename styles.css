@@ -18,15 +18,12 @@ button, input, textarea, select { font: inherit; color: inherit; }
   --shadow: 0 10px 30px rgba(0,0,0,.35);
 }
 
-/* ========== GLOBAL ========== */
+/* --- Solid background --- */
 body{
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
-  color:var(--text);
-  background:
-    radial-gradient(600px 300px at 15% 70%, rgba(81,167,255,.25), transparent 60%),
-    radial-gradient(600px 300px at 85% 30%, rgba(139,92,246,.25), transparent 60%),
-    linear-gradient(#0d0e11, #121317);
-  background-color: var(--bg);
+  color: var(--text);
+  background: #13072e;          /* ← solid color */
+  background-color: #13072e;     /* fallback */
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -237,4 +234,11 @@ p{ color:var(--text); opacity:.95; }
 @media (prefers-reduced-motion: no-preference){
   .card, .btn { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
   .nav a { transition: color .15s ease, opacity .15s ease; }
+}
+
+.site-header{
+  position: sticky; top: 0; z-index: 50;
+  background: #13072e;           /* ← match page background */
+  backdrop-filter: none;          /* remove blur since no transparency now */
+  border-bottom: 1px solid var(--line);
 }
