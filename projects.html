@@ -1,32 +1,83 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Projects – Allahra Dionadji</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Alexander Aronowitz</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="font-[Inter] bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100">
-<header id="siteHeader"></header>
-<main class="max-w-6xl mx-auto px-4 py-16 sm:py-24">
-<h1 class="text-4xl font-extrabold">Projects</h1>
-<p class="mt-2 text-slate-600 dark:text-slate-300">Model predictive control, estimation, robotics, and embedded deployment.</p>
-<div class="mt-8 flex gap-3 text-sm">
-<button data-filter="all" class="filter-btn px-3 py-1.5 rounded-xl border">All</button>
-<button data-filter="control" class="filter-btn px-3 py-1.5 rounded-xl border">Control</button>
-<button data-filter="estimation" class="filter-btn px-3 py-1.5 rounded-xl border">Estimation</button>
-<button data-filter="robotics" class="filter-btn px-3 py-1.5 rounded-xl border">Robotics</button>
-<button data-filter="rl" class="filter-btn px-3 py-1.5 rounded-xl border">Learning</button>
-</div>
-<div id="projectsGridAll" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-</main>
-<footer id="siteFooter" class="py-8 text-center text-sm text-slate-500"></footer>
-<script src="data.js"></script>
-<script src="app.js" defer></script>
-</body>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><span class="brand-tag">ALEXANDER ARONOWITZ</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span class="sr-only">Toggle menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="experience.html">EXPERIENCE</a></li>
+          <li><a href="projects.html">PROJECT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-meter"><span></span></div>
+      </nav>
+    </div>
+  </header>
 
+  <main id="main">
+    <section class="projects section">
+      <div class="container">
+        <h2 class="section-title">SELECTED PROJECT</h2>
+        <div class="section-underline"></div>
+
+        <div class="projects-grid">
+          <article class="card">
+            <img src="assets/project1.jpg" alt="Arrowai dashboard screens" />
+            <div class="card-body">
+              <h3>Arrowai Industries | 2023</h3>
+              <p>Responsive landing, animation system, and component library.</p>
+              <button class="btn small view-btn" data-project="arrowai">View details</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/project2.jpg" alt="Abstract 3d scene" />
+            <div class="card-body">
+              <h3>Borcelle | 2023</h3>
+              <p>Identity refresh; type scale + color tokens for web.</p>
+              <button class="btn small view-btn" data-project="borcelle">View details</button>
+            </div>
+          </article>
+          <article class="card">
+            <img src="assets/project3.jpg" alt="Workspace with keyboard" />
+            <div class="card-body">
+              <h3>Fradel & Spies | 2023</h3>
+              <p>Microsite with a11y-first interactions and fast load.</p>
+              <button class="btn small view-btn" data-project="fradel">View details</button>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="year-rail" aria-hidden="true">2022 - 2023</aside>
+      <div class="baseline"><div class="line"></div><div class="stamp">PORTOFOLIO 2023</div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Alexander Aronowitz.</p></div></footer>
+
+  <!-- Project modal -->
+  <dialog id="projectModal" class="modal">
+    <article class="modal-card" role="document" aria-labelledby="modalTitle">
+      <header class="modal-header">
+        <h3 id="modalTitle">Project</h3>
+        <button class="modal-close" aria-label="Close">✕</button>
+      </header>
+      <div id="modalBody" class="modal-body"></div>
+      <footer class="modal-footer"><button class="btn ghost modal-close">Close</button></footer>
+    </article>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
