@@ -27,4 +27,10 @@ experience: [
 { role: "Research Intern", org: "Autonomy Research Center", period: "2022 – 2023", bullets: ["Implemented EKF sensor fusion; reduced drift by 30%.", "Co-authored safe RL for control paper."] }
 ]
 };
+SITE.education = [
+{ title: 'Senior Vocational High School', org: 'School of Art', meta: '2012' },
+{ title: 'Bachelor Degree – Control Engineering', org: 'Your University', meta: '2017' },
+{ title: 'Master Degree – Intelligent Systems', org: 'Your University', meta: '2019' }
+];
+
 
