@@ -1,3 +1,12 @@
+const NAV = [
+{ href: 'index.html', label: 'Home' },
+{ href: 'about.html', label: 'About' },
+{ href: 'education.html', label: 'Education' },
+{ href: 'projects.html', label: 'Projects' },
+{ href: 'publications.html', label: 'Publications' },
+{ href: 'experience.html', label: 'Experience' },
+{ href: 'contact.html', label: 'Contact' }
+];
 
 function renderProjectsPage(){
 const grid = document.getElementById('projectsGridAll'); if (!grid) return;
@@ -93,3 +102,4 @@ renderExperiencePage();
 wireContactForm();
 
 });
+
