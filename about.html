@@ -1,84 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About Me – Allahra</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>About — Alexander Aronowitz</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-  <script src="data.js"></script>
-<script src="app.js" defer></script>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><span class="brand-tag">ALEXANDER ARONOWITZ</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span class="sr-only">Toggle menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <nav id="nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="experience.html">EXPERIENCE</a></li>
+          <li><a href="projects.html">PROJECT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-meter"><span></span></div>
+      </nav>
+    </div>
+  </header>
 
-<body class="font-[Inter] bg-black text-slate-100">
-  <header id="siteHeader"></header>
-
-  <main class="about-wrap relative overflow-hidden">
-    <section class="max-w-6xl mx-auto px-4 py-16 lg:py-20 relative z-10">
-      <div class="grid lg:grid-cols-12 gap-10 items-start">
-        <!-- Left: framed portrait -->
-        <div class="lg:col-span-5 relative">
-          <div class="about-frame">
-            <img src="about.jpg" alt="Portrait" class="about-photo" />
+  <main id="main">
+    <section class="about section">
+      <div class="container about-grid">
+        <figure class="about-figure"><img src="assets/avatar.jpg" alt="Alexander portrait" /></figure>
+        <div class="about-copy">
+          <h2 class="section-title">MY BIOGRAPHY</h2>
+          <div class="section-underline"></div>
+          <p>I blend engineering thinking with visual storytelling. Replace this with your real bio.</p>
+          <p>Ship small. Iterate fast. Stay kind.</p>
+          <div class="chips">
+            <button class="chip" data-skill="Social Media">SOCIAL MEDIA</button>
+            <button class="chip" data-skill="Design">DESIGN</button>
+            <button class="chip" data-skill="Reading">READING</button>
+            <button class="chip" data-skill="Data Analyst">DATA ANALYST</button>
+            <button class="chip" data-skill="Photography">PHOTOGRAPHY</button>
           </div>
-          <!-- bottom timeline start cap aligned with frame -->
-          <div class="about-timeline-left-cap"></div>
-        </div>
-
-        <!-- Right: biography + dots + split gradient -->
-        <div class="lg:col-span-7 relative">
-          <!-- dotted accent grid -->
-          <div class="dot-grid" aria-hidden="true"></div>
-
-          <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">MY BIOGRAPHY</h1>
-          <div class="about-underline"></div>
-
-          <div class="mt-6 space-y-6 text-[15px] leading-7 text-slate-200/95">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi.
-              Suspendisse mollis nisl ac aliquet pretium. Suspendisse dignissim, odio non hendrerit suscipit, lorem ipsum tempus tortor,
-              suscipit vestibulum velit quam nec nibh.
-            </p>
-            <p>
-              Aliquam luctus faucibus augue, in porttitor eros imperdiet sit amet. Vivamus vel tortor at risus vestibulum elementum
-              accumsan id ante.
-            </p>
-          </div>
-
-          <h2 class="mt-10 text-2xl md:text-3xl font-extrabold">Skill &amp; Interest</h2>
-
-          <div id="aboutSkills" class="mt-4 flex flex-wrap gap-3"></div>
         </div>
       </div>
+      <div class="baseline"><div class="line"></div><div class="stamp">PORTOFOLIO 2023</div></div>
     </section>
-
-    <!-- Bottom timeline across the page -->
-    <div class="about-timeline">
-      <div class="about-timeline-line"></div>
-      <div class="about-timeline-right-cap"></div>
-      <div class="about-timeline-label">PORTOFOLIO <span id="aboutYear"></span></div>
-    </div>
   </main>
 
-  <footer id="siteFooter" class="py-8 text-center text-sm text-slate-500"></footer>
-
-  <script src="data.js"></script>
-  <script src="app.js" defer></script>
-  <script>
-    // Page-specific rendering for skills pills from data.js
-    document.addEventListener('DOMContentLoaded', () => {
-      const wrap = document.getElementById('aboutSkills');
-      const pills = (arr) => arr.map(x => `<span class='about-pill'>${x}</span>`).join('');
-      if (window.SITE && wrap) {
-        const s = SITE.skills;
-        wrap.innerHTML = [s.control[0], s.control[1], 'Design', 'Reading', 'Data Analyst', 'Photography'] // example order like screenshot
-          .map(x => `<span class='about-pill'>${x}</span>`).join('');
-      }
-      document.getElementById('aboutYear').textContent = new Date().getFullYear();
-    });
-  </script>
+  <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Alexander Aronowitz.</p></div></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
