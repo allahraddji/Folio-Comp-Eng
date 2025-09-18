@@ -1,82 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>[Your Name] – Control & Intelligent Systems Engineer</title>
-  <meta name="description" content="Portfolio of [Your Name], Control & Intelligent Systems: MPC, Robotics, Estimation, Embedded, Learning-based Control." />
-
-  <!-- Fonts & Tailwind -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Site styles (append the hero/nav rules from earlier responses) -->
+  <title>Home — Alexander Aronowitz</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="font-[Inter] bg-black text-slate-100">
-  <!-- Shared header injected by app.js -->
-  <header id="siteHeader"></header>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <main>
-    <!-- Hero -->
-    <section class="hero-neon relative overflow-hidden">
-      <div class="max-w-6xl mx-auto px-4 py-20 lg:py-28 relative z-10">
-        <p class="text-sky-400 font-semibold tracking-widest uppercase text-[12px]">Hello !!!</p>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand"><span class="brand-tag">ALEXANDER ARONOWITZ</span></a>
 
-        <h1 class="mt-6 leading-[0.95] font-extrabold text-[48px] sm:text-[64px] lg:text-[76px]">
-          I’m <span id="heroName" class="text-slate-100">[First Name]</span><br/>
-          <span class="text-slate-300">[Last Name]</span>
-        </h1>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav">
+        <span class="sr-only">Toggle menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
 
-        <div class="mt-6 inline-flex flex-wrap gap-3">
-          <span class="role-badge uppercase tracking-widest text-[12px] font-bold">Professional Content Creator</span>
-          <a href="cv.pdf" download
-             class="inline-block bg-sky-500 hover:bg-sky-400 text-black font-bold uppercase tracking-wider text-xs px-5 py-3 rounded shadow-md transition">
-            Download CV
-          </a>
+      <nav id="nav" class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a href="about.html">ABOUT ME</a></li>
+          <li><a href="education.html">EDUCATION</a></li>
+          <li><a href="experience.html">EXPERIENCE</a></li>
+          <li><a href="projects.html">PROJECT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <div class="nav-meter"><span></span></div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hello !!!</p>
+          <h1>I’m Alexander<br>Aronowitz</h1>
+          <span class="role-badge">PROFESSIONAL CONTENT CREATOR</span>
+          <p class="lead">
+            This is my responsive portfolio—clean layout, keyboard-friendly, and lightly animated.
+          </p>
+          <a class="btn primary" href="projects.html">See projects</a>
+          <a class="btn ghost" href="contact.html">Contact</a>
         </div>
-
-        <p class="mt-6 max-w-2xl text-slate-300/90 text-[15px] leading-7">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet massa sed leo molestie ultrices in non mi.
-          Suspendisse mollis nisl ac aliquet pretium. Suspendisse dignissim, odio non hendrerit suscipit, lorem ipsum tempus tortor,
-          suscipit vestibulum velit quam nec nibh.
-        </p>
+        <div class="hero-art"><img src="assets/hero.jpg" alt="Portrait with gradient glow"></div>
       </div>
-
-      <!-- Right portrait -->
-      <div class="absolute inset-y-0 right-0 w-[48%] min-w-[340px] hidden sm:block pointer-events-none select-none">
-        <img src="hero.jpg" alt="Your portrait" class="hero-photo" />
-      </div>
-
-      <!-- Bottom timeline bar -->
-      <div class="hero-timeline">
-        <div class="hero-timeline-line"></div>
-        <div class="hero-timeline-end"></div>
-        <div class="hero-timeline-start"></div>
-        <div class="hero-timeline-label">PORTFOLIO <span id="yearLabel"></span></div>
-      </div>
+      <div class="baseline"><div class="line"></div><div class="stamp">PORTOFOLIO 2023</div></div>
     </section>
   </main>
 
-  <!-- Shared footer injected by app.js -->
-  <footer id="siteFooter" class="py-8 text-center text-sm text-slate-500"></footer>
-
-  <script src="data.js"></script>
-  <script src="app.js" defer></script>
-  <script>
-    // Lightweight bindings for hero text + year using data.js
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.SITE) {
-        const [first, ...rest] = SITE.name.split(' ');
-        const nameFirstEl = document.getElementById('heroName');
-        const nameLastEl = document.querySelector('h1 span:nth-child(3)');
-        if (nameFirstEl) nameFirstEl.textContent = first || SITE.name;
-        if (nameLastEl) nameLastEl.textContent = rest.join(' ');
-      }
-      document.getElementById('yearLabel').textContent = new Date().getFullYear();
-    });
-  </script>
+  <footer class="site-footer"><div class="container"><p>© <span id="year"></span> Alexander Aronowitz.</p></div></footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
